@@ -1,0 +1,7 @@
+---
+- name :  Playboof for shell commands
+  hosts: all
+  tasks:
+    - name: shell command
+      shell: ls
+

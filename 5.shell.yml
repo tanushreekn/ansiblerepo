@@ -1,0 +1,11 @@
+---
+- name: ansible palybook3
+  hosts: group1
+  tasks:
+    - name:  shell commands
+      shell: pwd
+      register: tanu
+    - debug:
+        var: tanu.stdout_lines
+...
+  

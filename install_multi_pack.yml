@@ -1,0 +1,12 @@
+---
+- name : multiple_instalation wget and maven
+  hosts: all
+  become: yes
+  tasks:
+    - name: install wget and maven
+      apt:
+        name: "{{ item }}"
+        state: latest
+      with_items:
+        - maven
+...

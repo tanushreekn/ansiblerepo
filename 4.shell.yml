@@ -1,0 +1,9 @@
+---
+- name:
+  hosts: all
+  tasks:
+    - name: execute shell commands
+      shell: ls
+      register: varaible
+    - default:
+        var: variable.stdout_lines

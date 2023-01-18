@@ -1,0 +1,12 @@
+---
+- name: install multi poackages
+  hosts: all
+  tasks:
+    - name: wget and curl
+      apt:
+        name: "{{ item }}"
+        state: latest
+      with_items:
+        - wget
+        - curl
+

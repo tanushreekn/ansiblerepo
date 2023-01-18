@@ -1,0 +1,9 @@
+---
+- name: copy the files
+  hosts: all
+  tasks:
+    - name: copy files
+      copy:
+        src: /root/1_ping.yml
+        dest: /home/ubuntu
+

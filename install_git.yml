@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: install git Test machine
+      apt:
+        name: git
+        state: latest
+...

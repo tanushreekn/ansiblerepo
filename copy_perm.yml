@@ -1,0 +1,22 @@
+---
+- name: ansible_playbook
+  hosts: all
+  tasks:
+    - name: Install git
+      apt:
+        name: git
+        state: present
+
+    - name: copy file from remote to all target
+      copy:
+        src: /root/playbook1.yml
+        dest: /home/ubuntu/
+
+    - name: changing file permisiion  
+      file:
+        path: /home/ubuntu/playbook1.yml
+        mode: 0777
+        owner: root
+        group: root
+
+

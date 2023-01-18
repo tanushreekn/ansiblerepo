@@ -1,0 +1,8 @@
+---
+- name: change the file permisiion
+  hosts: all
+  tasks:
+    - name: 1_ping.yml change the permission
+      file:
+        path: /home/ubuntu
+        mode: 0644

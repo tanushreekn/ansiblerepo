@@ -1,0 +1,14 @@
+---
+- name: ansible palybook3
+  hosts: all
+  tasks:
+    - name:  shell commands
+      file:
+        path: /home/ubuntu
+        state: touch
+        mode: 0777
+      register: tanu
+    - debug:
+        var: tanu.stdout_lines
+...
+

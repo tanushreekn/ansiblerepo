@@ -1,0 +1,14 @@
+---
+- name: maultiple installation
+  hosts: all
+  become: yes
+  tasks:
+    - name: Multiple installation
+      apt:
+        name: "{{ item }}"
+        state: latest
+      loop:
+         - curl
+         - vim
+
+
